@@ -1,0 +1,2 @@
+id,object,gripper_finger_1_joint,gripper_finger_2_joint,direction,qw,qx,qy,qz,pos-x,pos-y,pos-z,eps_l1,vol_l1,
+0,orange_juice_hohesc,-0.7,0.1,SIDE,0,0.707106781,0,0.707106781,-133,16,0,0.01,0.0005,0
