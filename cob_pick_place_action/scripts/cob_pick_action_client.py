@@ -29,12 +29,13 @@ import cob_pick_place_action.msg
 def setup_environment():
 	psi = smi_.get_planning_scene_interface()
 	rospy.sleep(1.0)
-
+	
+	#smi_.clear_objects("moveit_gripper_left")
 	#smi_.clear_objects("arm_7_link")
 	smi_.clear_objects("arm_left_7_link")
 
 	### Add a floor
-	smi_.add_ground()
+	#smi_.add_ground()
 
 	### Add table
 	pose = PoseStamped()
@@ -48,7 +49,7 @@ def setup_environment():
 	pose.pose.orientation.z = 0
 	pose.pose.orientation.w = 1
 
-	psi.add_box("bookcase", pose, size=(0.5, 1.5, 0.78))
+	#psi.add_box("bookcase", pose, size=(0.5, 1.5, 0.78))
 
 	rospy.sleep(1.0)
 
