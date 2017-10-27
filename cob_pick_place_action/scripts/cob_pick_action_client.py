@@ -83,10 +83,11 @@ def cob_pick_action_client():
 	#goal.gripper_side = ""
 
 	### cob4
-	goal.object_pose.pose.position.x = 0.617 + random.uniform(-0.1, 0.1)
-	goal.object_pose.pose.position.y = 0.589 + random.uniform(-0.1, 0.1)
-	goal.object_pose.pose.position.z = 0.979 + random.uniform(-0.1, 0.1)
-	goal.object_pose.pose.orientation.x, goal.object_pose.pose.orientation.y, goal.object_pose.pose.orientation.z, goal.object_pose.pose.orientation.w = quaternion_from_euler(random.uniform(-pi/2, pi/2),random.uniform(-pi/2, pi/2),random.uniform(-pi/2, pi/2))
+	goal.object_pose.pose.position.x = 0.268452 + random.uniform(-0.1, 0.1)
+	goal.object_pose.pose.position.y = 0.323378 + random.uniform(-0.1, 0.1)
+	goal.object_pose.pose.position.z = 0.64329 + random.uniform(-0.1, 0.1)
+	goal.object_pose.pose.orientation.x = -0.187529; goal.object_pose.pose.orientation.y = 0.109051; goal.object_pose.pose.orientation.z = -0.827924; goal.object_pose.pose.orientation.w = 0.517229
+ #= quaternion_from_euler(random.uniform(-pi/2, pi/2),random.uniform(-pi/2, pi/2),random.uniform(-pi/2, pi/2))
 	#goal.object_pose.pose.orientation.x, goal.object_pose.pose.orientation.y, goal.object_pose.pose.orientation.z, goal.object_pose.pose.orientation.w = quaternion_from_euler(-1.571, -0.000, -1.400)
 	goal.gripper_type = "sdhx"
 	#goal.gripper_side = ""
