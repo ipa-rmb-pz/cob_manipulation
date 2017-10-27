@@ -178,6 +178,15 @@ void CobPickPlaceActionServer::pick_goal_cb(const cob_pick_place_action::CobPick
 		group.setSupportSurfaceName(goal->support_surface);
 	}
 
+	/*
+	group.setEndEffectorLink("gripper_left_grasp_link");
+	for (std::vector<std::string>::const_iterator it=group.getJointNames().begin(); it != group.getJointNames().end(); ++it)
+		std::cout<<"\033[36;1m"<<"End-effector name: "	<< *it 	<<"\033[36;0m"<<std::endl;
+
+
+	std::cout<<"\033[36;1m"<<"End-effector name: "	<< group.getEndEffectorLink() 	<<"\033[36;0m"<<std::endl;
+	*/
+
 	///Call Pick
 	group.setPlanningTime(300.0);	//default is 5.0 s
 	success = group.pick(goal->object_name, grasps);
@@ -742,7 +751,7 @@ tf::Transform CobPickPlaceActionServer::transformPose(tf::Transform transform_O_
 		try{
 			/// ToDo: get palm-link name from robot!
 			//tf_listener_.lookupTransform("/sdh_palm_link", group.getEndEffectorLink(), ros::Time(0), transform_SDH_from_ARM7);
-			tf_listener_.lookupTransform("/gripper_left_palm_link", group.getEndEffectorLink(), ros::Time(0), transform_SDH_from_ARM7);
+			tf_listener_.lookupTransform("/gripper_left_grasp_link", group.getEndEffectorLink(), ros::Time(0), transform_SDH_from_ARM7);
 			transform_available = true;
 		}
 		catch (tf::TransformException ex){
