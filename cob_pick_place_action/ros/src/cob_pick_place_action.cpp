@@ -59,7 +59,7 @@ void CobPickPlaceActionServer::initialize()
 	map_classid_to_classname[128]="bathdetergent";
 
 	//non-KIT objects
-	map_classid_to_classname[5001]="pringles";
+	map_classid_to_classname[5001]="corn_flakes_package"; //"pringles"
 
 
 	static const std::string COB_PICKUP_ACTION_NAME = "cob_pick_action";
