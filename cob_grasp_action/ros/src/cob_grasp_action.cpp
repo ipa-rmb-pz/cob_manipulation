@@ -472,7 +472,7 @@ void CobGraspActionServer::fillGraspsOR(unsigned int objectClassId, std::string 
 			//debug
 			geometry_msgs::Transform msg_grasp_O_from_SDH;
 			tf::transformTFToMsg(transform_grasp_O_from_SDH, msg_grasp_O_from_SDH);
-			ROS_WARN_STREAM("msg_grasp_O_from_SDH:" << msg_grasp_O_from_SDH);
+			ROS_DEBUG_STREAM("msg_grasp_O_from_SDH:" << msg_grasp_O_from_SDH);
 
 			// HEADER_from_O (given)
 			tf::Transform transform_HEADER_from_O = tf::Transform(
@@ -481,14 +481,14 @@ void CobGraspActionServer::fillGraspsOR(unsigned int objectClassId, std::string 
 			//debug
 			geometry_msgs::Transform msg_HEADER_from_O;
 			tf::transformTFToMsg(transform_HEADER_from_O, msg_HEADER_from_O);
-			ROS_WARN_STREAM("msg_HEADER_from_O:" << msg_HEADER_from_O);
+			ROS_DEBUG_STREAM("msg_HEADER_from_O:" << msg_HEADER_from_O);
 
 			// FOOTPRINT_from_ARM7
 			tf::Transform transform_grasp_FOOTPRINT_from_ARM7 = transformPose(transform_grasp_O_from_SDH, transform_HEADER_from_O, object_pose.header.frame_id);
 			//debug
 			geometry_msgs::Transform msg_grasp_FOOTPRINT_from_ARM7;
 			tf::transformTFToMsg(transform_grasp_FOOTPRINT_from_ARM7, msg_grasp_FOOTPRINT_from_ARM7);
-			ROS_WARN_STREAM("msg_grasp_FOOTPRINT_from_ARM7:" << msg_grasp_FOOTPRINT_from_ARM7);
+			ROS_DEBUG_STREAM("msg_grasp_FOOTPRINT_from_ARM7:" << msg_grasp_FOOTPRINT_from_ARM7);
 
 			// convert to PoseStamped
 			geometry_msgs::Transform msg_transform_grasp_FOOTPRINT_from_ARM7;
