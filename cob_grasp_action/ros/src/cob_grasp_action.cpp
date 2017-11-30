@@ -59,7 +59,16 @@ void CobGraspActionServer::initialize()
 	map_classid_to_classname[128]="bathdetergent";
 
 	//non-KIT objects
-	map_classid_to_classname[5000]="pringles";
+	map_classid_to_classname[4991]="contact_lens_cleaner";
+	map_classid_to_classname[4992]="handbag";
+	map_classid_to_classname[4993]="hat_whiterock";
+	map_classid_to_classname[4994]="lady_wallet";
+	map_classid_to_classname[4995]="pummel_keychain";
+	map_classid_to_classname[4996]="ratiopharm_cetirizin";
+	map_classid_to_classname[4997]="squirrel_pillow";
+	map_classid_to_classname[4998]="tissue_soft_star";
+	map_classid_to_classname[4999]="milk";
+	map_classid_to_classname[5000]="orange_juice";
 	map_classid_to_classname[5001]="corn_flakes_package";
 
 	static const std::string QUERY_GRASPS_OR_ACTION_NAME = "query_grasps";
